@@ -1,24 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftyDice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d1" translatesAutoresizingMaskIntoConstraints="NO" id="PFj-fl-Iz7">
+                                <rect key="frame" x="7" y="248" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="7ho-I6-Ys6"/>
+                                    <constraint firstAttribute="height" constant="400" id="8RT-Qj-xt6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tap or Shake to roll the dice :)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2o-aI-U5U">
+                                <rect key="frame" x="1" y="750" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="plW-TE-3wk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="38"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5a-Jq-2zN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <action selector="buttonGotPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iyd-8m-aTd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m2o-aI-U5U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2sI-Ec-2y0"/>
+                            <constraint firstItem="PFj-fl-Iz7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8w9-k2-181"/>
+                            <constraint firstItem="m2o-aI-U5U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="1" id="CzK-Io-7Uv"/>
+                            <constraint firstAttribute="trailing" secondItem="m2o-aI-U5U" secondAttribute="trailing" constant="-1" id="EKe-wE-3M6"/>
+                            <constraint firstItem="P5a-Jq-2zN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FHA-K2-i9l"/>
+                            <constraint firstItem="P5a-Jq-2zN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RQb-xN-9XO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="m2o-aI-U5U" secondAttribute="bottom" priority="750" constant="10" id="TN2-2J-4Rx"/>
+                            <constraint firstItem="P5a-Jq-2zN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WPs-gn-4Az"/>
+                            <constraint firstAttribute="bottom" secondItem="P5a-Jq-2zN" secondAttribute="bottom" id="gPw-Yx-PKp"/>
+                            <constraint firstItem="PFj-fl-Iz7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i3J-2Y-KSH"/>
+                            <constraint firstItem="m2o-aI-U5U" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PFj-fl-Iz7" secondAttribute="bottom" priority="500" constant="1" id="tnx-P1-eS9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="criticalLabel" destination="m2o-aI-U5U" id="Ift-qR-lOx"/>
+                        <outlet property="diceImageView" destination="PFj-fl-Iz7" id="RoO-2V-A4t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="d1" width="320" height="316"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
